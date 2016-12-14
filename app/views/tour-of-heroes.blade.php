@@ -3,7 +3,7 @@
 <head>
 <base href="/www2/public/index.php/tour-of-heroes" />
 <meta charset="utf-8">
-<title>Angular 2 - Todo Example</title>
+<title>Angular 2 - Tour of Heroes | UI Deliverables</title>
 
 @if (App::environment()==='local')
 	<link rel="stylesheet" type="text/css" href="/www2-static/build/dev/css/global-styles.css">
