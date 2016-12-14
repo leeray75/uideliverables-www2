@@ -1,7 +1,11 @@
 <!doctype html>
 <html>
 <head>
-<base href="/www2/public/index.php/tour-of-heroes" />
+@if (App::environment()==='production')
+	<base href="/www2/tour-of-heroes" />
+@else
+	<base href="/www2/index.php/tour-of-heroes" />
+@endif
 <meta charset="utf-8">
 <title>Angular 2 - Tour of Heroes | UI Deliverables</title>
 
