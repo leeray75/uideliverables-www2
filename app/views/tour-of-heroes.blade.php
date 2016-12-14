@@ -4,7 +4,15 @@
 <base href="/www2/public/index.php/tour-of-heroes" />
 <meta charset="utf-8">
 <title>Angular 2 - Todo Example</title>
-<link rel="stylesheet" type="text/css" href="/www2-static/build/Release/css/global-styles.css">
+
+@if (App::environment()==='local')
+	<link rel="stylesheet" type="text/css" href="/www2-static/build/dev/css/global-styles.css">
+    <link rel="stylesheet" type="text/css" href="/www2-static/build/dev/css/ng2-apps/tour-of-heroes.css">
+@else
+	<link rel="stylesheet" type="text/css" href="/www2-static/build/Release/css/global-styles.css">
+	<link rel="stylesheet" type="text/css" href="/www2-static/build/Release/css/ng2-apps/tour-of-heroes.css">
+@endif
+
 </head>
 
 <body role="document">
@@ -16,6 +24,7 @@
 <script>
 (function(){
 	window.MySite = {
+		envitonment: '{{ App::environment() }}',
 		appPath: '/tour-of-heroes',
 		templateSrc: '/www2-static/build/Release/templates/ng2/tour-of-heroes/',
 		stylesSrc: 'www2-static/build/Release/css/ng2-apps/tour-of-heroes/',
@@ -48,6 +57,8 @@
   <my-app>Loading...</my-app>
 </div>
 <!-- /container -->
-
+@if (App::environment()==='production')
+	@include('shared.analytics')
+@endif
 </body>
 </html>
