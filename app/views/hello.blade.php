@@ -35,7 +35,8 @@
 </head>
 <body>
 <h1>{{ App::environment() }} </h1>
-<h1><?php echo $_SERVER['HTTP_HOST'] ?></h1>
+<h1>HOST: <?php echo $_SERVER['HTTP_HOST'] ?></h1>
+<h2>Version: <?php echo 'Current PHP version: ' . phpversion(); ?>
 <nav>
 <a href="{{ URL::to('logout') }}">Logout</a>
 </nav>
