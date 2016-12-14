@@ -15,10 +15,9 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
-Route::get('/tour-of-heroes', function()
-{
-	return View::make('tour-of-heroes');
-});
+Route::get('/tour-of-heroes', array('uses' => 'HomeController@showTourOfHeroes'));
+Route::get('/tour-of-heroes/{js_route}', array('uses' => 'HomeController@showTourOfHeroes'))->where('js_route', '(.*)');
+
 // route to show the login form
 Route::get('/login', array('uses' => 'HomeController@showLogin'));
 

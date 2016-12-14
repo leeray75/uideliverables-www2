@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<script>document.write('<base href="' + document.location + '" />');</script>
+<base href="/www2/public/index.php/tour-of-heroes" />
 <meta charset="utf-8">
 <title>Angular 2 - Todo Example</title>
 <!-- <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
@@ -16,13 +16,18 @@
 <script>
 (function(){
 	window.MySite = {
-		templateSrc: '../../../www2-static/build/Release/templates/ng2/tour-of-heroes/',
-		stylesSrc: '../../../www2-static/build/Release/css/ng2-apps/tour-of-heroes/',
-		onError: function(error){
-			console.warn("Error:",error);	
-		}
+		appPath: '/tour-of-heroes',
+		templateSrc: '/www2-static/build/Release/templates/ng2/tour-of-heroes/',
+		stylesSrc: 'www2-static/build/Release/css/ng2-apps/tour-of-heroes/'
 	}
-	
+	var paths = window.location.pathname.split(window.MySite.appPath);
+	var startPaths = paths[0];
+	var folders = startPaths.split("/");
+	var prefix = "";
+	folders.forEach(function(folder){
+		prefix+="../"
+	});
+	window.MySite.stylesSrc=prefix+window.MySite.stylesSrc;
 })();
 
 (function (global) {
