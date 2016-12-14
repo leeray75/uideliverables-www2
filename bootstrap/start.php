@@ -23,12 +23,24 @@ $app = new Illuminate\Foundation\Application;
 | given environment, then we will automatically detect it for you.
 |
 */
-
+/*
 $env = $app->detectEnvironment(array(
-
-	'local' => array('homestead'),
-
+	'local' => array('ASUS-G74'),
+	'local' => array('localhost'),
+	'production' => array('uideliverables.com'),
 ));
+*/
+
+$env = $app->detectEnvironment(function() {	
+	if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) {
+		return 'local';
+	}
+	else{
+		return 'production';	
+	}
+
+});
+
 
 /*
 |--------------------------------------------------------------------------

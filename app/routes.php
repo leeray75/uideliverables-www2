@@ -15,3 +15,14 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+Route::get('/tour-of-heroes', function()
+{
+	return View::make('tour-of-heroes');
+});
+// route to show the login form
+Route::get('/login', array('uses' => 'HomeController@showLogin'));
+
+// route to process the form
+Route::post('/login', array('uses' => 'HomeController@doLogin'));
+
+Route::get('logout', array('uses' => 'HomeController@doLogout'));
