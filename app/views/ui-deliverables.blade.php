@@ -54,13 +54,13 @@
 })();
 </script>
 @if (App::environment()==='local')
-	<script src="/www2-static//build/dev/js/ng2-apps/systemjs-config.js"></script>
+	<script src="/www2-static/build/dev/js/ng2-apps/systemjs-config.js"></script>
 	<script>
         System.import('app').catch(function(err){ console.error(err); });
     </script>
 @else
-	<script src="/www2-static//build/Release/js/ng2-apps/systemjs-config.min.js"></script>
-    <script src="/www2-static//build/Release/js/ng2-apps/ui-deliverables/ui-deliverables.combo.min.js"></script>
+	<script src="/www2-static/build/Release/js/ng2-apps/systemjs-config.min.js"></script>
+    <script src="/www2-static/build/Release/js/ng2-apps/ui-deliverables/ui-deliverables.combo.min.js"></script>
 	<script>
         System.import('main').catch(function(err){ console.error(err); });
     </script>
