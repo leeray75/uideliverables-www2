@@ -1,3 +1,4 @@
+<?php include('../www2-static/build/CacheBuster.php'); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -38,6 +39,7 @@
 <h1>HOST: <?php echo $_SERVER['HTTP_HOST'] ?></h1>
 <h2>Version: <?php echo 'Current PHP version: ' . phpversion(); ?></h2>
 <h2>Path: <?php echo $_SERVER['REQUEST_URI'] ?></h2>
+<h2>Cache Buster: <?php echo $cacheVersion ?></h2>
 <nav>
 <a href="{{ URL::to('logout') }}">Logout</a>
 </nav>

@@ -1,3 +1,4 @@
+<?php include('../www2-static/build/CacheBuster.php'); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,11 +19,11 @@
 <title>Angular 2 - Tour of Heroes | UI Deliverables</title>
 
 @if (App::environment()==='local')
-	<link rel="stylesheet" type="text/css" href="/www2-static/build/dev/css/global-styles.css">
-    <link rel="stylesheet" type="text/css" href="/www2-static/build/dev/css/ng2-apps/ui-deliverables.css">
+	<link rel="stylesheet" type="text/css" href="/www2-static/build/dev/css/global-styles.css?v=<?php echo $cacheVersion ?>">
+    <link rel="stylesheet" type="text/css" href="/www2-static/build/dev/css/ng2-apps/ui-deliverables.css?v=<?php echo $cacheVersion ?>">
 @else
-	<link rel="stylesheet" type="text/css" href="/www2-static/build/Release/css/global-styles.css">
-	<link rel="stylesheet" type="text/css" href="/www2-static/build/Release/css/ng2-apps/ui-deliverables.css">
+	<link rel="stylesheet" type="text/css" href="/www2-static/build/Release/css/global-styles.css?v=<?php echo $cacheVersion ?>">
+	<link rel="stylesheet" type="text/css" href="/www2-static/build/Release/css/ng2-apps/ui-deliverables.css?v=<?php echo $cacheVersion ?>">
 @endif
 
 </head>
@@ -54,13 +55,13 @@
 })();
 </script>
 @if (App::environment()==='local')
-	<script src="/www2-static/build/dev/js/ng2-apps/systemjs-config.js"></script>
+	<script src="/www2-static/build/dev/js/ng2-apps/systemjs-config.js?v=<?php echo $cacheVersion ?>"></script>
 	<script>
         System.import('app').catch(function(err){ console.error(err); });
     </script>
 @else
-	<script src="/www2-static/build/Release/js/ng2-apps/systemjs-config.min.js"></script>
-    <script src="/www2-static/build/Release/js/ng2-apps/ui-deliverables/ui-deliverables.combo.min.js"></script>
+	<script src="/www2-static/build/Release/js/ng2-apps/systemjs-config.min.js?v=<?php echo $cacheVersion ?>"></script>
+    <script src="/www2-static/build/Release/js/ng2-apps/ui-deliverables/ui-deliverables.combo.min.js?v=<?php echo $cacheVersion ?>"></script>
 	<script>
         System.import('main').catch(function(err){ console.error(err); });
     </script>
