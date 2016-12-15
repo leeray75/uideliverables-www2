@@ -16,6 +16,9 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+Route::get('/ui-deliverables', array('uses' => 'HomeController@showUI'));
+Route::get('/ui-deliverables/{js_route}', array('uses' => 'HomeController@showUI'))->where('js_route', '(.*)');
+
 Route::get('/tour-of-heroes', array('uses' => 'HomeController@showTourOfHeroes'));
 Route::get('/tour-of-heroes/{js_route}', array('uses' => 'HomeController@showTourOfHeroes'))->where('js_route', '(.*)');
 

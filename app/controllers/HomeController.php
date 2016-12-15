@@ -18,6 +18,10 @@ class HomeController extends BaseController {
 	public function showWelcome()
 	{
 		return View::make('hello');
+		
+	}
+	public function showUI(){
+		return View::make('ui-deliverables');
 	}
 	public function showTourOfHeroes()
 	{
