@@ -60,7 +60,7 @@
     </script>
 @else
 	<script src="/www2-static//build/Release/js/ng2-apps/systemjs-config.min.js"></script>
-    <script src="/www2-static//build/Release/js/ng2-apps/tour-of-heroes/tour-of-heroes.combo.min.js"></script>
+    <script src="/www2-static//build/Release/js/ng2-apps/ui-deliverables/ui-deliverables.combo.min.js"></script>
 	<script>
         System.import('main').catch(function(err){ console.error(err); });
     </script>
