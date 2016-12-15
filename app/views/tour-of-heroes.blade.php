@@ -28,7 +28,7 @@
 <script>
 (function(){
 	window.MySite = {
-		envitonment: '{{ App::environment() }}',
+		environment: '{{ App::environment() }}',
 		appPath: '/tour-of-heroes',
 		templateSrc: '/www2-static/build/Release/templates/ng2/tour-of-heroes/',
 		stylesSrc: 'www2-static/build/Release/css/ng2-apps/tour-of-heroes/',
