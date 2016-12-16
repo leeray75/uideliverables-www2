@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="robots" content="noindex">
 	<title>Laravel PHP Framework</title>
 	<style>
 		@import url(//fonts.googleapis.com/css?family=Lato:700);
@@ -37,9 +38,6 @@
 <body>
 <h1>{{ App::environment() }} </h1>
 <h1>HOST: <?php echo $_SERVER['HTTP_HOST'] ?></h1>
-<h2>Version: <?php echo 'Current PHP version: ' . phpversion(); ?></h2>
-<h2>Path: <?php echo $_SERVER['REQUEST_URI'] ?></h2>
-<h2>Cache Buster: <?php echo $cacheVersion ?></h2>
 <nav>
 <a href="{{ URL::to('logout') }}">Logout</a>
 </nav>
