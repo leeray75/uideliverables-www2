@@ -20,8 +20,8 @@ class HomeController extends BaseController {
 		return View::make('hello');
 		
 	}
-	public function showUI(){
-		return View::make('ui-deliverables');
+	public function showRaymondLee(){
+		return View::make('raymond-lee');
 	}
 	public function showTourOfHeroes()
 	{
